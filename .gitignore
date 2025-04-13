@@ -1,0 +1,32 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+*.user
+*.suo
+
+# VS Code
+.vscode/
+
+# Visual Studio
+.vs/
+*.vcxproj.user
+*.dbmdl
+*.bak
+*.pdb
+
+# ASP.NET Core
+bin/
+obj/
+*.log
+publish/
+appsettings.*.json
+
+# Rider
+.idea/
+
+# Others
+*.swp
+*.lock.json
