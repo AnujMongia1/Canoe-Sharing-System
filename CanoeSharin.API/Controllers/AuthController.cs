@@ -1,6 +1,8 @@
 ﻿using CanoeSharin.API.Data;
 using CanoeSharin.API.Models;
+using CanoeSharin.API.DTO_s;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -13,8 +15,10 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("register")]
-    public async Task<IActionResult> Register(User user)
+    public async Task<IActionResult> Register([FromBody] User user)
     {
+        Console.WriteLine($"REGISTER CALLED: {user.Username} / {user.Email}");
+
         if (_context.Users.Any(u => u.Email == user.Email))
             return BadRequest(new { message = "Email already exists." });
 
@@ -23,4 +27,23 @@ public class AuthController : ControllerBase
 
         return Ok(new { message = "Registration successful" });
     }
+
+
+    [HttpPost("login")]
+    public async Task<IActionResult> Login([FromBody] LoginDto login)
+    {
+        var user = await _context.Users
+            .FirstOrDefaultAsync(u => u.Email == login.Email && u.Password == login.Password);
+
+        if (user == null)
+            return Unauthorized(new { message = "Invalid credentials" });
+
+        return Ok(new
+        {
+            message = "login successful",
+            userId = user.Id,
+            username = user.Username
+        });
+    }
+
 }

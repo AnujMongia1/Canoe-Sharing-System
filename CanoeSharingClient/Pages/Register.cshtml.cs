@@ -1,4 +1,5 @@
 using System.Net.Http.Json;
+using CanoeSharingClient.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -16,17 +17,29 @@ public class RegisterModel : PageModel
     public async Task<IActionResult> OnPostAsync()
     {
         var form = Request.Form;
-        var registerPayload = new
+
+        var registerPayload = new UserRegisterDto
         {
-            username = form["Username"],
-            email = form["Email"],
-            password = form["Password"]
+            Username = form["Username"],
+            Email = form["Email"],
+            Password = form["Password"]
         };
 
         var client = _clientFactory.CreateClient("ApiClient");
         var response = await client.PostAsJsonAsync("auth/register", registerPayload);
 
-        Message = response.IsSuccessStatusCode ? "Registration successful!" : "Registration failed.";
+        if (response.IsSuccessStatusCode)
+        {
+            Message = "Registration successful!";
+        }
+        else
+        {
+            var errorDetails = await response.Content.ReadAsStringAsync();
+            Message = $"Registration failed: {errorDetails}";
+        }
+
         return Page();
     }
+
+
 }
