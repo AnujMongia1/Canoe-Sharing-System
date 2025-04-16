@@ -4,6 +4,7 @@ using CanoeSharin.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CanoeSharin.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250416060420_AddListingEntity")]
+    partial class AddListingEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -75,43 +78,6 @@ namespace CanoeSharin.API.Migrations
                     b.ToTable("Canoes");
                 });
 
-            modelBuilder.Entity("CanoeSharin.API.Models.RentalStore", b =>
-                {
-                    b.Property<int>("StoreID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StoreID"));
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Location")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StoreName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("StoreID");
-
-                    b.ToTable("RentalStores");
-                });
-
             modelBuilder.Entity("Listing", b =>
                 {
                     b.Property<int>("ListingID")
@@ -149,8 +115,6 @@ namespace CanoeSharin.API.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("ListingID");
-
-                    b.HasIndex("StoreID");
 
                     b.HasIndex("UserID");
 
@@ -203,15 +167,9 @@ namespace CanoeSharin.API.Migrations
 
             modelBuilder.Entity("Listing", b =>
                 {
-                    b.HasOne("CanoeSharin.API.Models.RentalStore", "RentalStore")
-                        .WithMany()
-                        .HasForeignKey("StoreID");
-
                     b.HasOne("User", "User")
                         .WithMany()
                         .HasForeignKey("UserID");
-
-                    b.Navigation("RentalStore");
 
                     b.Navigation("User");
                 });

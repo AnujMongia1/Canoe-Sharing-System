@@ -1,14 +1,36 @@
 ﻿@page
 @model CanoeSharingClient.Pages.CanoesModel
 @{
-    ViewData["Title"] = "Canoes";
+    ViewData["Title"] = "Available Listings";
 }
 
 <div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8 text-center">
-            <h2 class="text-primary">Welcome, @Model.Username!</h2>
-            <p class="lead mt-3">You're now logged into the Canoe Sharing System 🎉</p>
-        </div>
+    <h2 class="text-primary mb-4 text-center">Available Canoe Listings</h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var listing in Model.Listings)
+        {
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body">
+                        <h5 class="card-title">@listing.ModelName</h5>
+                        <p class="card-text">
+                            <strong>Make:</strong> @listing.Make<br />
+                            <strong>Location:</strong> @listing.Location<br />
+                            <strong>Available:</strong><br />
+                            <span>@listing.AvailabilityStartDate.ToShortDateString()</span> -
+                            <span>@listing.AvailabilityEndDate.ToShortDateString()</span>
+                            <br />
+                            <small>@listing.Description</small>
+                        </p>
+                    </div>
+                    <div class="card-footer text-center bg-white border-0">
+                        <a href="/Book?listingId=@listing.ListingID" class="btn btn-primary w-100">
+                            Book This Canoe
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>

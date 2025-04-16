@@ -1,0 +1,45 @@
+﻿@page
+@model CanoeSharingClient.Pages.BookModel
+@{
+    ViewData["Title"] = "Book Canoe";
+}
+
+<div class="container py-5">
+    <h2 class="text-primary">Booking: @Model.SelectedListing.ModelName</h2>
+
+    @if (!string.IsNullOrEmpty(Model.BookingMessage))
+    {
+        <div class="alert alert-success text-center">
+            @Model.BookingMessage
+        </div>
+    }
+
+    <p><strong>Make:</strong> @Model.SelectedListing.Make</p>
+    <p><strong>Description:</strong> @Model.SelectedListing.Description</p>
+    <p><strong>Location:</strong> @Model.SelectedListing.Location</p>
+    <p>
+        <strong>Available:</strong> @Model.SelectedListing.AvailabilityStartDate.ToShortDateString()
+        to @Model.SelectedListing.AvailabilityEndDate.ToShortDateString()
+    </p>
+
+    <form method="post" asp-page-handler="ConfirmBooking">
+        <input type="hidden" asp-for="ListingID" />
+
+        <div class="mb-3">
+            <label class="form-label">Booking Start Date</label>
+            <input asp-for="BookingStartDate" type="date" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Returning Date</label>
+            <input asp-for="ReturningDate" type="date" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Number of Canoes</label>
+            <input asp-for="NumberOfCanoes" class="form-control" type="number" min="1" required />
+        </div>
+
+        <button type="submit" class="btn btn-success">Confirm Booking</button>
+    </form>
+</div>
