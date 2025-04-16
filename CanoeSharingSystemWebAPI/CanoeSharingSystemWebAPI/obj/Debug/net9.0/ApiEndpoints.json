@@ -1,0 +1,166 @@
+[
+  {
+    "ContainingType": "CanoeSharingSystemWebAPI.Controllers.CanoeSharingAPIController",
+    "Method": "AddCanoeListing",
+    "RelativePath": "CanoeSharingSystemApi/AddListing",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Listing",
+        "Type": "CanoeSharingSystemWebAPI.Entities.Listing",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CanoeSharingSystemWebAPI.Controllers.CanoeSharingAPIController",
+    "Method": "GetAllBookings",
+    "RelativePath": "CanoeSharingSystemApi/Bookings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CanoeSharingSystemWebAPI.Controllers.CanoeSharingAPIController",
+    "Method": "GetAllBookingsById",
+    "RelativePath": "CanoeSharingSystemApi/Bookings/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CanoeSharingSystemWebAPI.Controllers.CanoeSharingAPIController",
+    "Method": "MakeBooking",
+    "RelativePath": "CanoeSharingSystemApi/Bookings/MakeBooking",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "booking",
+        "Type": "CanoeSharingSystemWebAPI.Entities.Booking",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CanoeSharingSystemWebAPI.Controllers.CanoeSharingAPIController",
+    "Method": "GetAllListings",
+    "RelativePath": "CanoeSharingSystemApi/Listings",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CanoeSharingSystemWebAPI.Controllers.CanoeSharingAPIController",
+    "Method": "GetAllListingsById",
+    "RelativePath": "CanoeSharingSystemApi/Listings/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CanoeSharingSystemWebAPI.Controllers.CanoeSharingAPIController",
+    "Method": "RegisterAsStore",
+    "RelativePath": "CanoeSharingSystemApi/RentalStore/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rentalStore",
+        "Type": "CanoeSharingSystemWebAPI.Entities.RentalStore",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CanoeSharingSystemWebAPI.Controllers.CanoeSharingAPIController",
+    "Method": "AddReview",
+    "RelativePath": "CanoeSharingSystemApi/Reviews/AddReview",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "booking",
+        "Type": "CanoeSharingSystemWebAPI.Entities.Booking",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CanoeSharingSystemWebAPI.Controllers.CanoeSharingAPIController",
+    "Method": "LoginAsStore",
+    "RelativePath": "CanoeSharingSystemApi/Stores/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "rentalStore",
+        "Type": "CanoeSharingSystemWebAPI.Entities.RentalStore",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CanoeSharingSystemWebAPI.Controllers.CanoeSharingAPIController",
+    "Method": "LoginAsUser",
+    "RelativePath": "CanoeSharingSystemApi/Users/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "CanoeSharingSystemWebAPI.Entities.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CanoeSharingSystemWebAPI.Controllers.CanoeSharingAPIController",
+    "Method": "RegisterAsUser",
+    "RelativePath": "CanoeSharingSystemApi/Users/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "User",
+        "Type": "CanoeSharingSystemWebAPI.Entities.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

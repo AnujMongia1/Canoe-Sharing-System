@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CanoeSharingSystemWebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+63c9aa8e42bb79079cb843d0f0f9f0abd08a95d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27d2b278af8dbf9178e354e9a293fc48b39e61cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("CanoeSharingSystemWebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CanoeSharingSystemWebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
