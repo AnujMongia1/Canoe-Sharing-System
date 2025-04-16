@@ -1,0 +1,6 @@
+@CanoeSharingSystemWebAPI_HostAddress = http://localhost:5053
+
+GET {{CanoeSharingSystemWebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

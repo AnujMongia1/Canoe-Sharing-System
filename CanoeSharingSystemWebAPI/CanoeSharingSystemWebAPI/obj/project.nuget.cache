@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "l8m62OPD618=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\anujm\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.3\\microsoft.aspnetcore.openapi.9.0.3.nupkg.sha512",
+    "C:\\Users\\anujm\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
+    "C:\\Users\\anujm\\.nuget\\packages\\microsoft.net.sdk.compilers.toolset\\9.0.201\\microsoft.net.sdk.compilers.toolset.9.0.201.nupkg.sha512"
+  ],
+  "logs": []
+}
