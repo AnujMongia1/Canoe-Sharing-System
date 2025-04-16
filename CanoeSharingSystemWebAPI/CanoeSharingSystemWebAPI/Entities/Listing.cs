@@ -9,6 +9,11 @@
         public string? Location { get; set; }
         public DateTime? AvailabilityStartDate { get; set; }
         public DateTime? AvailabilityEndDate { get; set; }
+        public int? RentalStoreId { get; set; }
+        public RentalStore? RentalStore { get; set; }
+        public int? UserId { get; set; }
+        public User? User { get; set; }
+        public ICollection<Booking>? Bookings { get; set; }
 
     }
 }
