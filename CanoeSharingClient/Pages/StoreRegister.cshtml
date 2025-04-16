@@ -1,0 +1,34 @@
+﻿@page
+@model CanoeSharingClient.Pages.StoreRegisterModel
+@{
+    ViewData["Title"] = "Register Store";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h3 class="text-center mb-4 text-primary">Register Store</h3>
+
+                    <form method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Store Name</label>
+                            <input type="text" name="StoreName" class="form-control" required />
+                        </div>
+
+                        <!-- Add other fields (Email, Password, Address, etc.) -->
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Register Store</button>
+                        </div>
+                    </form>
+
+                    <div class="text-center mt-3">
+                        <a class="btn btn-outline-secondary btn-sm" href="/">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -13,6 +13,8 @@ namespace CanoeSharin.API.Data
         public DbSet<User> Users => Set<User>();
         public DbSet<Canoe> Canoes => Set<Canoe>();
         public DbSet<Booking> Bookings => Set<Booking>();
+        public DbSet<RentalStore> RentalStores => Set<RentalStore>();
+        public DbSet<Review> Reviews => Set<Review>();
     }
 
 }
