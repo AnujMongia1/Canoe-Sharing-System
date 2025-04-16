@@ -1,7 +1,7 @@
 ﻿@page
-@model CanoeSharingClient.Pages.StoreRegisterModel
+@model StoreRegisterModel
 @{
-    ViewData["Title"] = "Register Store";
+    ViewData["Title"] = "Store Register";
 }
 
 <div class="container py-5">
@@ -9,23 +9,50 @@
         <div class="col-md-6 col-lg-5">
             <div class="card shadow-sm border-0">
                 <div class="card-body">
-                    <h3 class="text-center mb-4 text-primary">Register Store</h3>
+                    <h3 class="text-center mb-4 text-primary">Register as Store</h3>
 
                     <form method="post">
                         <div class="mb-3">
                             <label class="form-label">Store Name</label>
-                            <input type="text" name="StoreName" class="form-control" required />
+                            <input type="text" name="StoreName" class="form-control" placeholder="Enter your store name" required />
                         </div>
 
-                        <!-- Add other fields (Email, Password, Address, etc.) -->
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" name="Email" class="form-control" placeholder="Enter your store email" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" name="Password" class="form-control" placeholder="Enter your password" required />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Address</label>
+                            <input type="text" name="Address" class="form-control" placeholder="Enter your store address" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+                            <input type="text" name="PhoneNumber" class="form-control" placeholder="Enter your phone number" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Location</label>
+                            <input type="text" name="Location" class="form-control" placeholder="Enter your store location" />
+                        </div>
 
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary">Register Store</button>
+                            <button type="submit" class="btn btn-primary">Register</button>
                         </div>
                     </form>
 
+                    @if (Model.Message != null)
+                    {
+                        <div class="alert alert-info mt-4">@Model.Message</div>
+                    }
+
+                    <hr />
                     <div class="text-center mt-3">
-                        <a class="btn btn-outline-secondary btn-sm" href="/">Back to Home</a>
+                        <span>Already have an account?</span>
+                        <a class="btn btn-outline-secondary btn-sm ms-2" href="/StoreLogin">Store Login</a>
                     </div>
                 </div>
             </div>
