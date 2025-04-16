@@ -46,4 +46,34 @@ public class AuthController : ControllerBase
         });
     }
 
+
+    [HttpPost("register/store")]
+    public async Task<IActionResult> RegisterStore([FromBody] RentalStore store)
+    {
+        if (_context.RentalStores.Any(s => s.Email == store.Email))
+            return BadRequest(new { message = "Email already exists." });
+
+        _context.RentalStores.Add(store);
+        await _context.SaveChangesAsync();
+
+        return Ok(new { message = "Store registration successful" });
+    }
+
+    [HttpPost("login/store")]
+    public async Task<IActionResult> LoginStore([FromBody] LoginDto login)
+    {
+        var store = await _context.RentalStores
+            .FirstOrDefaultAsync(s => s.Email == login.Email && s.Password == login.Password);
+
+        if (store == null)
+            return Unauthorized(new { message = "Invalid credentials" });
+
+        return Ok(new
+        {
+            message = "Store login successful",
+            storeId = store.StoreID,
+            storeName = store.StoreName
+        });
+    }
+
 }
