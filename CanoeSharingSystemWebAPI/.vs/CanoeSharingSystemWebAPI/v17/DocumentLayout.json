@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2A76C123-70BD-4A8C-9BBE-579826311A3A}|CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj|c:\\users\\anujm\\source\\repos\\canoe-sharing-system\\canoesharingsystemwebapi\\canoesharingsystemwebapi\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A76C123-70BD-4A8C-9BBE-579826311A3A}|CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj|solutionrelative:canoesharingsystemwebapi\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A76C123-70BD-4A8C-9BBE-579826311A3A}|CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj|c:\\users\\anujm\\source\\repos\\canoe-sharing-system\\canoesharingsystemwebapi\\canoesharingsystemwebapi\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A76C123-70BD-4A8C-9BBE-579826311A3A}|CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj|solutionrelative:canoesharingsystemwebapi\\entities\\listing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A76C123-70BD-4A8C-9BBE-579826311A3A}|CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj|c:\\users\\anujm\\source\\repos\\canoe-sharing-system\\canoesharingsystemwebapi\\canoesharingsystemwebapi\\entities\\rentalstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A76C123-70BD-4A8C-9BBE-579826311A3A}|CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj|solutionrelative:canoesharingsystemwebapi\\entities\\rentalstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A76C123-70BD-4A8C-9BBE-579826311A3A}|CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj|c:\\users\\anujm\\source\\repos\\canoe-sharing-system\\canoesharingsystemwebapi\\canoesharingsystemwebapi\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A76C123-70BD-4A8C-9BBE-579826311A3A}|CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj|solutionrelative:canoesharingsystemwebapi\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A76C123-70BD-4A8C-9BBE-579826311A3A}|CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj|c:\\users\\anujm\\source\\repos\\canoe-sharing-system\\canoesharingsystemwebapi\\canoesharingsystemwebapi\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A76C123-70BD-4A8C-9BBE-579826311A3A}|CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj|solutionrelative:canoesharingsystemwebapi\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2A76C123-70BD-4A8C-9BBE-579826311A3A}|CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj|c:\\users\\anujm\\source\\repos\\canoe-sharing-system\\canoesharingsystemwebapi\\canoesharingsystemwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2A76C123-70BD-4A8C-9BBE-579826311A3A}|CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI.csproj|solutionrelative:canoesharingsystemwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -14,17 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RentalStore.cs",
+              "DocumentMoniker": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\Entities\\RentalStore.cs",
+              "RelativeDocumentMoniker": "CanoeSharingSystemWebAPI\\Entities\\RentalStore.cs",
+              "ToolTip": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\Entities\\RentalStore.cs",
+              "RelativeToolTip": "CanoeSharingSystemWebAPI\\Entities\\RentalStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T05:40:29.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Listing.cs",
+              "DocumentMoniker": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\Entities\\Listing.cs",
+              "RelativeDocumentMoniker": "CanoeSharingSystemWebAPI\\Entities\\Listing.cs",
+              "ToolTip": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\Entities\\Listing.cs",
+              "RelativeToolTip": "CanoeSharingSystemWebAPI\\Entities\\Listing.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAcAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T05:35:15.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\Entities\\Booking.cs",
+              "RelativeDocumentMoniker": "CanoeSharingSystemWebAPI\\Entities\\Booking.cs",
+              "ToolTip": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\Entities\\Booking.cs",
+              "RelativeToolTip": "CanoeSharingSystemWebAPI\\Entities\\Booking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T05:44:55.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\Entities\\Review.cs",
+              "RelativeDocumentMoniker": "CanoeSharingSystemWebAPI\\Entities\\Review.cs",
+              "ToolTip": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\Entities\\Review.cs",
+              "RelativeToolTip": "CanoeSharingSystemWebAPI\\Entities\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T05:47:17.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "CanoeSharingSystemWebAPI\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\Entities\\User.cs",
+              "RelativeToolTip": "CanoeSharingSystemWebAPI\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T05:33:31.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\Program.cs",
               "RelativeDocumentMoniker": "CanoeSharingSystemWebAPI\\Program.cs",
               "ToolTip": "C:\\Users\\anujm\\source\\repos\\Canoe-Sharing-System\\CanoeSharingSystemWebAPI\\CanoeSharingSystemWebAPI\\Program.cs",
               "RelativeToolTip": "CanoeSharingSystemWebAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-16T00:14:04.282Z",
               "EditorCaption": ""
