@@ -24,7 +24,6 @@ public class StoreRegisterModel : PageModel
             Password = form["Password"].ToString().Trim(),
             Address = form["Address"].ToString().Trim(),
             PhoneNumber = form["PhoneNumber"].ToString().Trim(),
-            Location = form["Location"].ToString().Trim()
         };
 
         var client = _clientFactory.CreateClient("ApiClient");

@@ -9,5 +9,6 @@
         public string Location { get; set; } = "";
         public DateTime AvailabilityStartDate { get; set; }
         public DateTime AvailabilityEndDate { get; set; }
+        public string StoreName { get; set; } = "";
     }
 }

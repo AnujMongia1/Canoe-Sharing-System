@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Net.Http.Json;
 using System.Text.Json;
 
 public class StoreLoginModel : PageModel
 {
     private readonly IHttpClientFactory _clientFactory;
+
     public StoreLoginModel(IHttpClientFactory clientFactory)
     {
         _clientFactory = clientFactory;
@@ -25,38 +25,26 @@ public class StoreLoginModel : PageModel
         };
 
         var client = _clientFactory.CreateClient("ApiClient");
-
         var response = await client.PostAsJsonAsync("auth/login/store", loginPayload);
 
-        var raw = await response.Content.ReadAsStringAsync();
-        Console.WriteLine("API RESPONSE: " + raw);
+        var rawResponse = await response.Content.ReadAsStringAsync();
 
         if (response.IsSuccessStatusCode)
         {
-            try
-            {
-                var loginResult = JsonSerializer.Deserialize<StoreLoginResponse>(raw, new JsonSerializerOptions
-                {
-                    PropertyNameCaseInsensitive = true
-                });
+            var result = JsonSerializer.Deserialize<LoginResponse>(rawResponse,
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
-                TempData["StoreId"] = loginResult?.StoreId;
-                TempData["StoreName"] = loginResult?.StoreName;
+            HttpContext.Session.SetInt32("StoreID", result!.StoreId);
+            HttpContext.Session.SetString("StoreName", result.StoreName);
 
-                return RedirectToPage("/IDK");
-            }
-            catch (Exception ex)
-            {
-                Message = $"Success but parsing failed: {ex.Message}";
-                return Page();
-            }
+            return RedirectToPage("/ManageListings");
         }
 
-        Message = $"Login failed: {raw}";
+        Message = $"Login failed: {rawResponse}";
         return Page();
     }
 
-    public class StoreLoginResponse
+    private class LoginResponse
     {
         public string Message { get; set; } = "";
         public int StoreId { get; set; }

@@ -1,0 +1,33 @@
+﻿@page
+@model ManageListingsModel
+@{
+    ViewData["Title"] = "Manage Listings";
+}
+
+<div class="container py-5">
+    <h2 class="mb-4">Manage Listings - @Model.StoreName</h2>
+
+    <a href="/AddListing" class="btn btn-primary mb-3">Add New Listing</a>
+
+    <div class="list-group">
+        @foreach (var listing in Model.Listings)
+        {
+            <div class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h5>@listing.ModelName</h5>
+                        <p class="mb-1">@listing.Description</p>
+                        <small>Available: @listing.AvailabilityStartDate.ToShortDateString() - @listing.AvailabilityEndDate.ToShortDateString()</small>
+                    </div>
+                    <div>
+                        <a href="/EditListing?id=@listing.ListingID" class="btn btn-sm btn-warning">Edit</a>
+                        <form method="post" class="d-inline">
+                            <input type="hidden" name="listingId" value="@listing.ListingID" />
+                            <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

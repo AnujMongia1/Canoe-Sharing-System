@@ -17,39 +17,13 @@ namespace CanoeSharingClient.Pages
 
         public async Task OnGetAsync()
         {
-            //  Uncomment this block when API is working
-            /*
             var client = _clientFactory.CreateClient("ApiClient");
             var response = await client.GetFromJsonAsync<List<ListingDto>>("listings");
 
             if (response != null)
                 Listings = response;
-            */
-
-            //  Mock listings for UI development (no API required)
-            Listings = new List<ListingDto>
-            {
-                new ListingDto
-                {
-                    ListingID = 1,
-                    ModelName = "Explorer Mayank",
-                    Make = "CanoeWorks",
-                    Description = "Lightweight solo canoe, ideal for lakes.",
-                    Location = "Blue Lake Dock",
-                    AvailabilityStartDate = DateTime.Today,
-                    AvailabilityEndDate = DateTime.Today.AddDays(5)
-                },
-                new ListingDto
-                {
-                    ListingID = 2,
-                    ModelName = "Ocean Voyager",
-                    Make = "RiverRider",
-                    Description = "Built for longer journeys with extra storage.",
-                    Location = "Harbour Bay",
-                    AvailabilityStartDate = DateTime.Today.AddDays(2),
-                    AvailabilityEndDate = DateTime.Today.AddDays(8)
-                }
-            };
+            else
+                Listings = new List<ListingDto>();
         }
     }
 }

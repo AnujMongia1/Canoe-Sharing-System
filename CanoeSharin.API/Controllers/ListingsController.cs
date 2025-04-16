@@ -18,8 +18,18 @@ public class ListingsController : ControllerBase
     public async Task<IActionResult> GetAllListings()
     {
         var listings = await _context.Listings
-            .Include(l => l.User)
             .Include(l => l.RentalStore)
+            .Select(l => new
+            {
+                l.ListingID,
+                l.ModelName,
+                l.Make,
+                l.Description,
+                l.Location,
+                l.AvailabilityStartDate,
+                l.AvailabilityEndDate,
+                l.StoreID
+            })
             .ToListAsync();
 
         return Ok(listings);
@@ -44,5 +54,44 @@ public class ListingsController : ControllerBase
         await _context.SaveChangesAsync();
 
         return CreatedAtAction(nameof(GetListing), new { id = listing.ListingID }, listing);
+    }
+    [HttpGet("mystore/{storeId}")]
+    public async Task<IActionResult> GetStoreListings(int storeId)
+    {
+        var listings = await _context.Listings
+            .Where(l => l.StoreID == storeId)
+            .Include(l => l.RentalStore)
+            .ToListAsync();
+
+        return Ok(listings);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateListing(int id, [FromBody] Listing listing)
+    {
+        if (id != listing.ListingID)
+            return BadRequest();
+
+        var existingListing = await _context.Listings.FindAsync(id);
+        if (existingListing == null)
+            return NotFound();
+
+        _context.Entry(existingListing).CurrentValues.SetValues(listing);
+        await _context.SaveChangesAsync();
+
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteListing(int id)
+    {
+        var listing = await _context.Listings.FindAsync(id);
+        if (listing == null)
+            return NotFound();
+
+        _context.Listings.Remove(listing);
+        await _context.SaveChangesAsync();
+
+        return NoContent();
     }
 }
